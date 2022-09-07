@@ -14,29 +14,35 @@ struct ContentView: View {
     var body: some View {
         ZStack{
         VStack{
-          Text("currency converter")
+          Text("Currency converter")
             .padding()
             
             TextField("number in dinar", text: $dinar)
            
             HStack{
-                Image("games")
+                Image("america")
                     .resizable()
                     .frame(width: 50, height: 50)
-                Text("$= \(Double(dinar) ?? 0)")
+                Text("$= \((Double(dinar) ?? 0)*3.28)")
             }
             HStack{
-                Image("games")
+                Image("british")
                     .resizable()
                     .frame(width: 50, height: 50)
-                Text("$= \(Double(dinar) ?? 0)")
+                Text("£= \((Double(dinar) ?? 0)*2.46)")
             }
             HStack{
-                Image("games")
+                Image("euro")
                     .resizable()
                     .frame(width: 50, height: 50)
-                Text("$= \((Double(dinar) ?? 0)*1.5)")
+                Text("€= \((Double(dinar) ?? 0)*2.70)")
+                
+                
             }
+            Spacer()
+            Image("currency")
+                .resizable()
+                .frame(width: 200, height: 200)
         }
         
     }
